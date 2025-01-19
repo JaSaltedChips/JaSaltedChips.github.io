@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Shell Commands"
+title: "Insightful Inklings"
 ---
-# Shell Commands
+## Insightful Inklings
 
-There are so many shell commands I keep forgetting or just can’t seem to remember. This is my go-to spot to store all of them, so I can easily come back when I need them — and you can too, if you ever need one!
+Is a collection of handy commands and everyday discoveries — a go-to spot for one seeking quick tips and practical knowledge. It’s a treasure chest of unsorted yet invaluable insights. Here's everything that I have collected:
 
 <ul>
   {% for post in site.posts %}
