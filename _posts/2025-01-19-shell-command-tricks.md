@@ -3,9 +3,12 @@ layout: post
 title: "Useful Shell Commands"
 category: shell-command-tricks
 ---
+## Table of Contents
+{% toc %}
 
+---
 
-# Print your folder structure in readable format using the `tree` command
+## Print your folder structure in readable format using the `tree` command
 Here’s how to do it on Windows:
 
 ### **Using Command Prompt (CMD)**
@@ -40,4 +43,4 @@ mysite/
 │   ├── 2025-01-15-building-better-habits.md
 ```
 
-After running the command, you can simply copy and paste the output here.
+After running the command, you can simply copy and paste the output.

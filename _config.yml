@@ -30,6 +30,7 @@ github_username: JaSaltedChips
 # Build settings
 theme: minima
 plugins:
+  - jekyll-toc
   - jekyll-feed
 
 # Cleaner URLs
