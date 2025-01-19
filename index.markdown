@@ -3,9 +3,10 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Welcome, folks!
+title: Harsha's Blog
 ---
 
+## Welcome, folks!
 <!-- 
 1. markdown syntax
 ![My Photo](assets/images/harsha.jpg) 
