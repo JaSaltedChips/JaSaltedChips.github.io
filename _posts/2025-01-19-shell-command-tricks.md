@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Shell Command Tricks"
+title: "Useful Shell Commands"
+category: shell-command-tricks
 ---
 
 
