@@ -32,6 +32,11 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Cleaner URLs
+# Without this setting, the URL would be something like https://yourusername.github.io/2025/01/19/welcome-to-jekyll.html.
+# With permalink: /:path/, the .html extension is omitted, making the URL look cleaner: https://yourusername.github.io/2025/01/19/welcome-to-jekyll/.
+permalink: /:path/
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
