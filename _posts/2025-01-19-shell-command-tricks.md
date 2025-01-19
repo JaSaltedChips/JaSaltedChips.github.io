@@ -39,4 +39,4 @@ mysite/
 │   ├── 2025-01-15-building-better-habits.md
 ```
 
-After running the command, you can simply copy and paste the output here. Let me know if you need any assistance with this!
+After running the command, you can simply copy and paste the output here.
