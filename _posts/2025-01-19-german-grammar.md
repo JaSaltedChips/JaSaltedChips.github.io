@@ -12,16 +12,17 @@ Notes on some topics in the German grammar that could come in handy.
         - [Auxiliary Verbs](#auxiliary-verbs-hilfsverben-in-german)
         - [Modal Verbs](#modal-verbs-modalverben-in-german)
     - [Plusquamperfekt](#plusquamperfekt)
-    - [Difference between different past tenses](#difference-between-perfekt-präteritum-and-plusquamperfekt)
+    - [Differences](#differences)
 2. [Allgemein](#allgemein)
     - [Q. Why is there no verb at Position 2 after "wann"?](#q-why-is-there-no-verb-at-position-2-after-wann)
     
 ---
 
-## Past tense in German
-The **Plusquamperfekt** in German is the **past perfect tense**, used to describe actions that occurred **before another past action**. It’s essentially "the past of the past. On the other hand, "**Präteritum** and **Perfekt** are both used to describe just the past actions, but they differ in usage and formality:
+## **Past tense in German**
+There are types of past tenses in German: **Plusquamperfekt**, **Präteritum**, and **Perfekt**.
 
-### **Präteritum and Perfekt**:
+### Präteritum and Perfekt:
+**Präteritum** and **Perfekt** are both used to describe just the past actions, but they differ in usage and formality:
 1. **Präteritum** (Simple Past):
    - Mostly used in **written** language (e.g., novels, newspapers, reports).
    - Common for auxiliary and modal verbs (e.g., *ich war* - I was, *ich konnte* - I could).
@@ -34,49 +35,79 @@ The **Plusquamperfekt** in German is the **past perfect tense**, used to describ
 
 Think of **Präteritum** as being more formal and bookish, while **Perfekt** is what you’d use in everyday conversations.
 
-#### **Auxiliary Verbs** (*Hilfsverben* in German):
-- **Definition**: Auxiliary verbs are "helping verbs" used to form tenses, moods, or voices in combination with other verbs.
-- **In German**: The three main auxiliary verbs are:
-  1. **sein** (to be)
-  2. **haben** (to have)
-  3. **werden** (to become)
-- **Usage**:
-  - **Tenses**: *Ich habe gegessen.* (I have eaten.)
-  - **Passive voice**: *Das Auto wird repariert.* (The car is being repaired.)
-  - **Future tense**: *Ich werde es machen.* (I will do it.)
+<!-- color can also be rgba format -> background-color: rgba(220, 201, 246, 0.8); -->
+<details style="background-color: #c9f6dc; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+  <summary style="cursor: pointer; font-weight: bold;">Auxiliary Verbs (Hilfsverben in German)</summary>
 
-#### **Modal Verbs** (*Modalverben* in German):
-- **Definition**: Modal verbs express necessity, possibility, ability, permission, or obligation. They modify the meaning of the main verb.
-- **In German**: The six modal verbs are:
-  1. **können** (can, to be able to)
-  2. **müssen** (must, to have to)
-  3. **dürfen** (may, to be allowed to)
-  4. **sollen** (should, to be supposed to)
-  5. **wollen** (to want to)
-  6. **mögen** (to like to)
+  <p><strong>Definition:</strong> Auxiliary verbs are “helping verbs” used to form tenses, moods, or voices in combination with other verbs.</p>
 
-- **Usage**:
-  - **Express ability**: *Ich kann schwimmen.* (I can swim.)
-  - **Express necessity**: *Ich muss lernen.* (I have to study.)
-  - **Express permission**: *Darf ich gehen?* (May I leave?)
+  <p><strong>In German:</strong> The three main auxiliary verbs are:</p>
+  <ul>
+    <li><em>sein</em> (to be)</li>
+    <li><em>haben</em> (to have)</li>
+    <li><em>werden</em> (to become)</li>
+  </ul>
 
-### **Plusquamperfekt**
+  <p><strong>Usage:</strong></p>
+  <ul>
+    <li><strong>Tenses:</strong> Ich habe gegessen. (I have eaten.)</li>
+    <li><strong>Passive voice:</strong> Das Auto wird repariert. (The car is being repaired.)</li>
+    <li><strong>Future tense:</strong> Ich werde es machen. (I will do it.)</li>
+  </ul>
 
-#### **How is it formed?**
+</details>
+
+<details style="background-color: #c9e2f6; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+  <summary style="cursor: pointer; font-weight: bold;">Modal Verbs (Modalverben in German)</summary>
+
+  <p><strong>Definition:</strong> Modal verbs express necessity, possibility, ability, permission, or obligation. They modify the meaning of the main verb.</p>
+
+  <p><strong>In German:</strong> The six modal verbs are:</p>
+  <ul>
+    <li><em>können</em> (can, to be able to)</li>
+    <li><em>müssen</em> (must, to have to)</li>
+    <li><em>dürfen</em> (may, to be allowed to)</li>
+    <li><em>sollen</em> (should, to be supposed to)</li>
+    <li><em>wollen</em> (to want to)</li>
+    <li><em>mögen</em> (to like to)</li>
+  </ul>
+
+  <p><strong>Usage:</strong></p>
+  <ul>
+    <li><strong>Express ability:</strong> *Ich kann schwimmen.* (I can swim.)</li>
+    <li><strong>Express necessity:</strong> *Ich muss lernen.* (I have to study.)</li>
+    <li><strong>Express permission:</strong> *Darf ich gehen?* (May I leave?)</li>
+  </ul>
+
+</details>
+<br>
+
+### Plusquamperfekt
+The **Plusquamperfekt** in German is the **past perfect tense**, used to describe actions that occurred **before another past action**. It’s essentially "the past of the past.
+#### How is it formed?
 The Plusquamperfekt is constructed with:
 1. The **Präteritum** (simple past) of an auxiliary verb (**haben** or **sein**)   
 2. The **past participle** of the main verb.
 
-#### Example:
-- **Ich hatte gegessen, bevor sie kam.**  
-  (I had eaten before she came.)
-  - *hatte* (Präteritum of **haben**) + *gegessen* (past participle of **essen**)
+<details style="background-color: rgba(255, 235, 120, 0.8); padding: 10px; border-radius: 5px; border: 1px solid rgba(220, 201, 246, 0.5);">
+  <summary style="cursor: pointer; font-weight: bold;">Examples</summary>
 
-- **Er war gegangen, bevor es dunkel wurde.**  
-  (He had left before it got dark.)
-  - *war* (Präteritum of **sein**) + *gegangen* (past participle of **gehen**)
+  <p><strong>Example 1:</strong></p>
+  <ul>
+    <li><em>Ich hatte gegessen, bevor sie kam.</em></li>
+      - (I had eaten before she came.)
+  </ul>
+  <p><strong>Explanation:</strong> <em>hatte</em> (Präteritum of <em>haben</em>) + <em>gegessen</em> (past participle of <em>essen</em>)</p>
 
-#### **When is it used?**
+  <p><strong>Example 2:</strong></p>
+  <ul>
+    <li><em>Er war gegangen, bevor es dunkel wurde.</em></li>
+      - (He had left before it got dark.)
+  </ul>
+  <p><strong>Explanation:</strong> <em>war</em> (Präteritum of <em>sein</em>) + <em>gegangen</em> (past participle of <em>gehen</em>)</p>
+</details>
+
+#### When is it used?
 The Plusquamperfekt is used when:
 1. You want to show that one action **happened earlier than another past event**.
    - *Nachdem ich den Film gesehen hatte, las ich das Buch.*  
@@ -84,7 +115,7 @@ The Plusquamperfekt is used when:
 
 2. It often appears in storytelling, especially when providing background information or sequence.
 
-### **Difference between Perfekt, Präteritum, and Plusquamperfekt**
+### **Differences**
 - **Perfekt**: Describes a completed action (common in spoken German).  
   Example: *Ich habe gegessen.* (I have eaten/I ate.)
 - **Präteritum**: Also describes a completed action but is more common in written German.  
@@ -103,12 +134,12 @@ Here's a concise version to remember:
 3. **Plusquamperfekt**: **Auxiliary (haben/sein)** in Präteritum + **past participle**.  
    (*Ich hatte gegangen.* - I had gone.)
 
-This rule structure keeps it logical and easy to follow. Just remember that the choice between **haben** and **sein** depends on the main verb (motion/change of state usually takes **sein**, while others use **haben**). 😊
+This rule structure keeps it logical and easy to follow. Just remember that the choice between **haben** and **sein** depends on the main verb (motion/change of state usually takes **sein**, while others use **haben**).
 
 ---
-## Allgemein
+## **Allgemein**
 
-### Q. Why is there no verb at Position 2 after "wann"?
+### Q1. Why is there no verb at Position 2 after "wann"?
 
 *German Sentence:*
 > "Wann immer wir hinter jemandem hergehen, der auf der Straße raucht, hustet er scharf, und dann stell ich mir vor, wie seine Stimmbänder gegeneinander scheuern, feucht und rosa wie Hühnerfleisch."
