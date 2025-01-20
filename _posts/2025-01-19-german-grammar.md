@@ -141,11 +141,14 @@ This rule structure keeps it logical and easy to follow. Just remember that the 
 
 ### Q1. Why is there no verb at Position 2 after "wann"?
 
-*German Sentence:*
-> "Wann immer wir hinter jemandem hergehen, der auf der Straße raucht, hustet er scharf, und dann stell ich mir vor, wie seine Stimmbänder gegeneinander scheuern, feucht und rosa wie Hühnerfleisch."
-
-*Translation of the Sentence:*
-> "Whenever we walk behind someone who is smoking on the street, he coughs sharply, and then I imagine how his vocal cords rub against each other, moist and pink like chicken meat."
+<details style="background-color: #c9f6dc; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+  <summary style="cursor: pointer; font-weight: bold;">German Sentence:</summary>
+    <p>Wann immer wir hinter jemandem hergehen, der auf der Straße raucht, hustet er scharf, und dann stell ich mir vor, wie seine Stimmbänder gegeneinander scheuern, feucht und rosa wie Hühnerfleisch.</p>
+</details>
+<details style="background-color: #c9e2f6; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+  <summary style="cursor: pointer; font-weight: bold;">Translation of the Sentence:</summary>
+    <p>Whenever we walk behind someone who is smoking on the street, he coughs sharply, and then I imagine how his vocal cords rub against each other, moist and pink like chicken meat.</p>
+</details>
 
 In this sentence, **"wann immer"** introduces a **subordinate clause** (*Nebensatz*), where the verb must be placed **at the end**. This is because **"wann immer"** acts as a subordinating conjunction (**subordinierende Konjunktion**), which changes the word order.
 
