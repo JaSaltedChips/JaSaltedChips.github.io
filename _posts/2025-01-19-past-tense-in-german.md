@@ -1,25 +1,20 @@
 ---
 layout: post
-title: "German Grammar Tips"
+title: "Past tense in German"
 category: german-language
 ---
 
-Notes on some topics in the German grammar that could come in handy.
+There are types of past tenses in German: **Plusquamperfekt**, **Präteritum**, and **Perfekt**.
 
 ## Table of Contents
-1. [Past tense in German](#past-tense-in-german)
+- [Past tense in German](#past-tense-in-german)
     - [Präteritum and Perfekt](#präteritum-and-perfekt)
         - [Auxiliary Verbs](#auxiliary-verbs-hilfsverben-in-german)
-        - [Modal Verbs](#modal-verbs-modalverben-in-german)
+       - [Modal Verbs](#modal-verbs-modalverben-in-german)
     - [Plusquamperfekt](#plusquamperfekt)
     - [Differences](#differences)
-2. [Allgemein](#allgemein)
-    - [Q. Why is there no verb at Position 2 after "wann"?](#q-why-is-there-no-verb-at-position-2-after-wann)
     
 ---
-
-## **Past tense in German**
-There are types of past tenses in German: **Plusquamperfekt**, **Präteritum**, and **Perfekt**.
 
 ### Präteritum and Perfekt:
 **Präteritum** and **Perfekt** are both used to describe just the past actions, but they differ in usage and formality:
