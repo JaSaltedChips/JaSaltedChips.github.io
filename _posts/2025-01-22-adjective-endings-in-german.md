@@ -6,10 +6,10 @@ category: german-language
 
 There are three kinds of adjective endings in German: **strong**, **weak**, and **mixed**.
 
-Understanding these adjective endings in German is essential for mastering adjective usage, as the endings depend on the **presence and type of article** and the **case, gender, and number** of the noun being described. Here's an overview:
+Understanding these adjective endings in German is essential for mastering adjective usage, as the endings depend on the **presence/absence and type of article** and the **case, gender, and number** of the noun being described. Here's an overview:
 
 #### 1. **Strong Adjective Endings**
-- Used **without an article** or when the noun is not preceded by a definite/indefinite article (e.g., with possessive pronouns or no determiner at all).
+- Used **without an article**.
 - The adjective takes the **strong endings** to indicate the case, gender, and number clearly.
 
 | **Case**      | **Masculine** | **Feminine** | **Neuter** | **Plural**  |
@@ -136,7 +136,7 @@ Similarly, here is the declension for **definite articles**, covering all cases,
     - Confusion arises because "ein" doesn't indicate gender, making it unclear whether we are dealing with a masculine or neuter noun.
 
 - **Solution:**
-    - To resolve this ambiguity, adjectives take **strong endings**:
+    - To resolve this ambiguity (or, to bring as much clarity as a **definite article** would bring), adjectives take **strong endings**:
         - ein großer Mann (masculine)
         - ein großes Brot (neuter)
 
@@ -168,10 +168,15 @@ Similarly, here is the declension for **definite articles**, covering all cases,
     - Similarly, the indefinite article doesn’t clarify the distinction between masculine and neuter.
 
 - **Solution:**
-    - Since **no additional clarity** is needed (as both the definite and indefinite articles don't distinguish between masculine and neuter in the dative case), adjectives take **weak endings**:
+    - Since **no additional clarity** is needed (as the definite articles didn't bring it either), adjectives take **weak endings**:
         - einem guten Mann (masculine)
         - einem guten Brot (neuter)
-    - One could also argue: why not use the "**feature of the language**" argument to give the dative singular neuter an *-es* ending as in the accusative case? However, the key point is that with *-es* in the accusative and *-em* in the dative, we achieve clarity between the two cases. This distinction is not necessary between nominative and accusative as the role of the noun (subject vs. direct object) helps bring the clarity in such cases.
+    - One could also argue: why not use the "**feature of the language**" argument to give the dative singular neuter an "*-es*" ending as in the accusative case?
+      - The key point is that with "*eines*"/"*großes*" in the accusative and "*einem*"/"*großen*" in the dative, we achieve clarity between the two cases.
+    This distinction is not necessary between nominative and accusative/dative as the role of the noun (subject vs. direct object) helps bring the clarity in such cases.
+
+In summary, we have eventually achieved as much as clarity and distinction between genders, cases, and numbers, as the direct articles would bring.
+With this understanding, I would say, we simply memorize this rule and move forward.
 
 ---
 ---
