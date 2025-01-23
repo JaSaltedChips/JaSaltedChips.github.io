@@ -93,9 +93,11 @@ Understanding these adjective endings in German is essential for mastering adjec
   <summary style="cursor: pointer; font-weight: bold;">Picture to help you memorize:</summary>
     <img src="../../assets/images/adjective-endings.png" alt="Adjective Endings in German">
 </details>
----
----
 <br>
+
+---
+
+## Additional Reading
 ### Core Idea of **Mixed Endings**: My Deduction
 
 The core purpose of **mixed adjective endings** is to achieve the same level of clarity as **definite article endings** provide.
@@ -181,7 +183,7 @@ Similarly, here is the declension for **definite articles**, covering all cases,
   <p><strong>Definite Articles:</strong></p>
   <ul>
     <li>Masculine: dem Mann</li>
-    <li>Neuter: dam Brot</li>
+    <li>Neuter: dem Brot</li>
     <li>There’s no distinction between masculine and neuter in the **dative** with the definite article.</li>
   </ul>
 
@@ -209,9 +211,11 @@ Similarly, here is the declension for **definite articles**, covering all cases,
 </details>
 <br>
 
-In summary, we have eventually achieved as much as clarity and distinction between genders, cases, and numbers, as the direct articles would bring. With this understanding, we could simply memorize this rule and move forward.
+Yes, I acknowledge that the logic isn't entirely consistent. However, the crucial aspect is that with this structure, one can identify gender, case, and number, whether through
+declensions or the noun's position (subject, direct object, indirect object). The means may vary, but they achieve the goal. Therefore, with this reasonably good understanding,
+we should proceed by memorizing the table (pictured above) and treating it as a rule or axiom.
 
-Thanks for reading :)
+Thanks for reading.😊 See you around next time.
 
 ---
 
