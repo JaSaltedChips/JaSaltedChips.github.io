@@ -8,6 +8,8 @@ The concept of **"Infinitiv mit zu"** in German refers to sentences where the **
 
 ![Infinitiv-mit-zu-1](../../assets/images/infinitiv-mit-zu-1.png)
 
+![Infinitiv-mit-zu-2](../../assets/images/infinitiv-mit-zu-2.png)
+
 ### Basic Structure
 The **"zu"** comes before the infinitive verb, and the verb is placed at the **end of the clause**.
 
