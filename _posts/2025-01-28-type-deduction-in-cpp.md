@@ -4,19 +4,33 @@ title: "Understanding type deductions in C++"
 category: cpp-techniques
 ---
 
-Understanding **type deduction** in C++ enhances **code simplicity, flexibility, and performance**. It removes redundant type declarations, improves **generic programming**, minimizes type-related errors, and boosts efficiency (e.g., with **universal references** and **move semantics**). Mastering it leads to cleaner, more maintainable, and efficient code.  
+Understanding **type deduction** in C++ enhances **code simplicity, flexibility, and performance**. It removes redundant type declarations, improves **generic programming**, minimizes type-related errors, and boosts efficiency (e.g., with **universal references** and **move semantics**). Mastering it leads to cleaner, more maintainable, and efficient code.
 
-This blog summarizes **Items 1, 2, and 3** from *Effective Modern C++*, focusing on key concepts of **type deduction**. Consider this a handy cheat-sheet, but I highly recommend reading the book itself for deeper insights directly from the master himself, Scott Meyers. Let’s dive in!
+This blog summarizes <strong>Items 1, 2, and 3</strong> from <em>Effective Modern C++</em>, focusing on key concepts of <strong>type deduction</strong>. 
+Consider this a handy cheat-sheet, but I highly recommend reading the book itself for deeper insights directly from the master himself, Scott Meyers. Let's dive in!
+
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <div style="flex: 1; text-align: left; border-radius: 10px; padding: 10px;">
+    <p>
+      <strong>"Type inference and deduction is the ultimate in language design: letting the compiler do as much work as possible while retaining a clear and efficient syntax for the programmer." 
+      <br>— Bjarne Stroustrup</strong>
+    </p>
+  </div>
+  <div style="flex: 1; display: flex; justify-content: center; border-radius: 10px; overflow: hidden;">
+    <img src="../../assets/images/lets_dive.png" alt="My Photo" style="width: 350px; border-radius: 50%;">
+  </div>
+</div>
+
+<br>
+
+---
 
 In C++, there are three kinds of type deductions:
 
 1. **`template` type deduction**
 2. **`auto` type deduction**
 3. **`decltype` type deduction**
-
-Let's try to understand few of the most important points for each of them.
-
----
 
 ## Understanding template type deduction
 
