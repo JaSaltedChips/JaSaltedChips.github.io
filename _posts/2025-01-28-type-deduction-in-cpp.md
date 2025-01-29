@@ -4,57 +4,62 @@ title: "Understanding type deductions in C++"
 category: cpp-techniques
 ---
 
+Understanding **type deduction** in C++ enhances **code simplicity, flexibility, and performance**. It removes redundant type declarations, improves **generic programming**, minimizes type-related errors, and boosts efficiency (e.g., with **universal references** and **move semantics**). Mastering it leads to cleaner, more maintainable, and efficient code.  
+
+This blog summarizes **Items 1, 2, and 3** from *Effective Modern C++*, focusing on key concepts of **type deduction**. Consider this a handy cheat-sheet, but I highly recommend reading the book itself for deeper insights directly from the master himself, Scott Meyers. Let’s dive in!
+
 In C++, there are three kinds of type deductions:
 
 1. **`template` type deduction**
 2. **`auto` type deduction**
 3. **`decltype` type deduction**
 
+Let's try to understand few of the most important points for each of them.
+
 ---
 
 ## Understanding template type deduction
 
-`template` type deduction is a fundamental concept in C++ that determines how the compiler deduces types for template parameters. The general form of a template function and its call is:
+- `template` type deduction is a fundamental concept in C++ that determines how the compiler deduces types for template parameters. The general form of a template function and its call is:
 
-```cpp
-template<typename T>
-void func(ParamType param);
+   ```cpp
+   template<typename T>
+   void func(ParamType param);
 
-func(expr);
-```
+   func(expr);
+   ```
 
-The type deduced for `T` depends on both `expr` and the form of `ParamType`:
+- The type deduced for `T` depends on both `expr` and the form of `ParamType`:
 
-1. **Pointer or Reference (`T&` or `T*`)**: The compiler ignores reference-ness in `expr` and deduces `T` based on the underlying type.
-   - If `expr` is `int&`, `T` is deduced as `int`.
+   1. **Pointer or Reference (`T&` or `T*`)**: The compiler ignores reference-ness in `expr` and deduces `T` based on the underlying type.
+      - If `expr` is `int&`, `T` is deduced as `int`.
 
-2. **Universal Reference (`T&&`)**: 
-   - If `expr` is an lvalue, `T` is deduced as an lvalue reference.
-   - If `expr` is an rvalue, `T` is deduced as the type of the rvalue.
+   2. **Universal Reference (`T&&`)**: 
+      - If `expr` is an lvalue, `T` is deduced as an lvalue reference.
+      - If `expr` is an rvalue, `T` is deduced as the type of the rvalue.
 
-3. **Neither Pointer nor Reference (Pass-by-Value, `T`)**: The compiler ignores both reference-ness and const-ness in `expr`. 
-   - If `expr` is `const int&`, `T` is deduced as `int`.
+   3. **Neither Pointer nor Reference (Pass-by-Value, `T`)**: The compiler ignores both reference-ness and const-ness in `expr`. 
+      - If `expr` is `const int&`, `T` is deduced as `int`.
 
-<!-- color can also be rgba format -> background-color: rgba(220, 201, 246, 0.8); -->
-<details style="background-color:rgba(172, 206, 230, 0.5); padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
-  <summary style="cursor: pointer; font-weight: bold;">Counter Intuitive (?)</summary>
-  <p>Case 3 might sound counter-intuitive because in case 1, <code>ParamType</code> had a reference, which was ignored while deducing. Here, there is no reference, yet it is still ignored. The key takeaway is that you should not see this as a formula but rather apply the underlying idea:</p>
-  <ul>
-    <li><strong>In case 1,</strong>  although the type is deduced as <code>T</code>, the object itself remains a reference.</li>
-    <li><strong>In case 3,</strong>  since the object is passed by value, keeping the reference makes no sense.</li>
-    <li>The same applies to <code>const</code> or <code>volatile</code> qualifiers—they become irrelevant because the function works with a **copy**, making the state of the original object unimportant.</li>
-  </ul>
+   <!-- color can also be rgba format -> background-color: rgba(220, 201, 246, 0.8); -->
+   <details style="background-color:rgba(172, 206, 230, 0.5); padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+   <summary style="cursor: pointer; font-weight: bold;">Counter Intuitive (?)</summary>
+   <p>Case 3 might sound counter-intuitive because in case 1, <code>ParamType</code> had a reference, which was ignored while deducing. Here, there is no reference, yet it is still ignored. The key takeaway is that you should not see this as a formula but rather apply the underlying idea:</p>
+   <ul>
+      <li><strong>In case 1,</strong>  although the type is deduced as <code>T</code>, the object itself remains a reference.</li>
+      <li><strong>In case 3,</strong>  since the object is passed by value, keeping the reference makes no sense.</li>
+      <li>The same applies to <code>const</code> or <code>volatile</code> qualifiers—they become irrelevant because the function works with a **copy**, making the state of the original object unimportant.</li>
+   </ul>
+   </details>
+   <br>
 
-</details>
-<br>
-
-<div style="border: 1px solid #3498db; padding: 10px; background-color: #eaf5fc; border-radius: 5px;">
-<strong>Note:</strong>
-<ul>
-   <li> Unless <code>ParamType</code> is a universal reference (<code>T&&</code>), the deduced type will never be a reference. </li>
-   <li> And this deduced type reference shall also be an l-value reference. </li>
-</ul>  
-</div>
+   <div style="border: 1px solid #3498db; padding: 10px; background-color: #eaf5fc; border-radius: 5px;">
+   <strong>Note:</strong>
+   <ul>
+      <li> Unless <code>ParamType</code> is a universal reference (<code>T&&</code>), the deduced type will never be a reference. </li>
+      <li> And this deduced type reference shall also be an l-value reference. </li>
+   </ul>  
+   </div>
 
 ### Key Takeaways:
 - `T` deduction depends on both `expr` and `ParamType`.
@@ -65,63 +70,61 @@ The type deduced for `T` depends on both `expr` and the form of `ParamType`:
 
 ## Understanding auto type deduction
 
-`auto` type deduction follows the same rules as template type deduction.
+-  `auto` type deduction follows the same rules as template type deduction.
 
-```cpp
-auto x = 27;            // T is int
-const auto cx = x;      // T is int, but type specifier is 'const auto'
-auto cx2 = cx;          // cx is const int, but T is int (const is ignored)
-const auto& rx = x;     // type specifier is 'const auto&', so T is int
-```
+   ```cpp
+   auto x = 27;            // T is int
+   const auto cx = x;      // T is int, but type specifier is 'const auto'
+   auto cx2 = cx;          // cx is const int, but T is int (const is ignored)
+   const auto& rx = x;     // type specifier is 'const auto&', so T is int
+   ```
 
-The compiler internally treats these as:
+-  Internally, the compiler treats these as: 
 
-```cpp
-template<typename T>
-void func_for_x(T param);
+   ```cpp
+   template<typename T>
+   void func_for_x(T param);
 
-template<typename T>
-void func_for_cx(const T param);
+   template<typename T>
+   void func_for_cx(const T param);
 
-template<typename T>
-void func_for_rx(const T& param);
-```
+   template<typename T>
+   void func_for_rx(const T& param);
+   ```
 
-#### Three cases of auto type deduction
-1. Pointer or Reference
-2. Universal Reference
-3. Neither a Pointer nor a Reference
+-  There are also three cases of `auto` type deduction, like `template` type deduction
 
-```cpp
-auto x = 27;         // Case 3: T is int
-const auto& rx = x;  // Case 1: T is int
-auto&& uref2 = cx;   // cx is const int -> T is const int
-auto&& uref3 = 27;   // 27 is an r-value -> T is int
-```
+   ```cpp
+   auto x = 27;         // Case 3: T is int
+   const auto& rx = x;  // Case 1: T is int
+   auto&& uref2 = cx;   // cx is const int -> T is const int
+   auto&& uref3 = 27;   // 27 is an r-value -> T is int
+   ```
 
->  
-> Unlike template type deduction, `auto` type deduction can deduce `std::initializer_list`:
-> ```cpp
-> template <typename T>
-> void func(T param);
-> 
-> func({1, 2, 3}); // Error: template type deduction fails
-> ```
->
-> Why this behavior? It is just like that! Think of it as a rule!
->
-> Thus, `auto type deduction = template type deduction + brace initialization support.`
+-  Consider the below example:
+   ```cpp
+   template <typename T>
+   void func(T param);
 
-### auto in function return type in C++ 11:
+   func({1, 2, 3}); // Error: template type deduction fails
+   ```
 
-When `auto` is used in function return types, it follows template type deduction rules, meaning **brace initialization is not supported**:
+-  **´auto´ in function return types (C++11)**  
+   When `auto` is used in function return types, it follows **template type deduction rules**, meaning **brace initialization is not supported**:  
 
-```cpp
-auto func()
-{ 
-   return {1, 2, 3}; // Error: Cannot deduce initializer list
-} 
-```
+   ```cpp
+   auto func()
+   { 
+      return {1, 2, 3}; // Error: Cannot deduce initializer list
+   } 
+   ```  
+
+<div style="border: 1px solid #3498db; padding: 10px; background-color: #eaf5fc; border-radius: 5px;">
+   <strong>Note:</strong>
+   <p> Unlike template type deduction, auto type deduction <strong>can</strong> deduce std::initializer_list.</p>
+   <p><strong> Why this behavior?</strong> It is simply a rule of the language.</p>
+   <p> Thus, <strong>´auto´ type deduction = ´template´ type deduction + brace initialization support.</strong></p>
+</div>
 
 ### Key Takeaways
 Here are the key takeaways for `auto` type deduction:
@@ -139,65 +142,72 @@ Here are the key takeaways for `auto` type deduction:
 
 ---
 
-## Understanding `decltype` type deduction
+## Understanding decltype type deduction
 
-**`decltype` is a Parrot:** `decltype` returns the exact type of an expression without modification. This makes it useful in cases where precise type control is needed.
+-  **`decltype` is a Parrot:** `decltype` returns the exact type of an expression without modification. This makes it useful in cases where precise type control is needed.
 
-```cpp
-int x = 19;
-decltype(x) a = x;  // Type: int
-decltype((x)) b = x; // Type: int&
-```
+   ```cpp
+   int x = 19;
+   decltype(x) a = x;  // Type: int
+   decltype((x)) b = x; // Type: int&
+   ```
 
-### Using `decltype` for function return types
+-  In C++ 11, primary use of `decltype` is declaring function templates where the function's return type depends on the parameter type.
 
-In C++ 11, primary use of `decltype` is declaring function templates where the function's return type depends on the parameter type.
+   ```cpp
+   template <typename Container, typename Index>
+   auto authAndAccess(Container& c, Index i) -> decltype(c[i]) {
+      authenticateUser();
+      return c[i];
+   }
+   ```
+   The trailing return type has the advantage that the function's parameters can be used in the specification of return type. If we have the return type preceed the function name in the conventional way,
+   `c` and `i` would not be available because they wound not have been declared yet.
 
-```cpp
-template <typename Container, typename Index>
-auto authAndAccess(Container& c, Index i) -> decltype(c[i]) {
-    authenticateUser();
-    return c[i];
-}
-```
-The trailing return type has the advantage that the function's parameters can be used in the specification of return type. If we have the return type preceed the function name in the conventional way,
-`c` and `i` would not be available because they wound not have been declared yet.
+-  **C++14 Enhancement**: C++14 allows `auto` to deduce function return types, removing the need for explicit trailing return types
 
-### C++14 Enhancement
+   ```cpp
+   template <typename Container, typename Index>
+   auto authAndAccess(Container& c, Index i) {
+      authenticateUser();
+      return c[i];
+   }
+   ```
 
-C++14 allows `auto` to deduce function return types, removing the need for explicit trailing return types:
+   However, without `decltype`, references can be dropped unexpectedly i.e., we have seen the example already `auto& rx = x;` `T` is deduced as `int`, while the type specifier is whole `auto&`:
 
-```cpp
-template <typename Container, typename Index>
-auto authAndAccess(Container& c, Index i) {
-    authenticateUser();
-    return c[i];
-}
-```
+   ```cpp
+   authAndAccess(d, 5) = 10; // Problem: authAndAccess(d, 5) is r-value
+   ```
 
-However, without `decltype`, references can be dropped unexpectedly i.e., we have seen the example already `auto& rx = x;` `T` is deduced as `int`, while the type specifier is whole `auto&`:
+   -  Using `decltype(auto)` ensures correctness:
 
-```cpp
-authAndAccess(d, 5) = 10; // Problem: authAndAccess(d, 5) is r-value
-```
+      ```cpp
+      template <typename Container, typename Index>
+      decltype(auto) authAndAccess(Container& c, Index i) {
+         authenticateUser();
+         return c[i];
+      }
+      ```
 
-Using `decltype(auto)` ensures correctness:
+      -  `auto` says the type needs to be deduced.
+      -  `decltype` says `decltype` rule needs to be applied.
 
-```cpp
-template <typename Container, typename Index>
-decltype(auto) authAndAccess(Container& c, Index i) {
-    authenticateUser();
-    return c[i];
-}
-```
-
-`auto` says the type needs to be deduced. `decltype` says `decltype` rule needs to be applied.
-
- ### Final C++14 Universal reference solution:
+### Final C++14 Universal reference solution:
 
 ```cpp
 template <typename Container, typename Index>
 decltype(auto) authAndAccess(Container&& c, Index i) { // Item 24
+    authenticateUser();
+    return std::forward<Container>(c[i]); // Item 25: admonition to apply std::forward to Universal references.
+}
+```
+
+### Final C++11 Universal reference solution:
+
+```cpp
+template <typename Container, typename Index>
+auto authAndAccess(Container&& c, Index i) -> decltype(std::forward<Container>(c[i])) { // Item 24
     authenticateUser();
     return std::forward<Container>(c[i]); // Item 25: admonition to apply std::forward to Universal references.
 }
