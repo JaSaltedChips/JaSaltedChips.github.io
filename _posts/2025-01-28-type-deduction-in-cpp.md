@@ -4,10 +4,9 @@ title: "Understanding type deductions in C++"
 category: cpp-techniques
 ---
 
-Understanding **type deduction** in C++ leads to cleaner, simpler [^1], and more maintainable code. This boosts efficiency (e.g., with **universal references** and **move semantics**).
-It improves **generic programming** and boosts efficiency with **universal references** and **move semantics**.
+Understanding **type deduction** in C++ leads to cleaner, simpler [^1], and more maintainable code. It improves **generic programming** and boosts efficiency with **universal references** and **move semantics**.
 
-[^1]: At times or most of the times it feels unreadable, to be honest.
+[^1]: Sometimes, it feels like trying to decode an ancient scroll written by a caffeinated wizard.
 
 This blog breaks down **Items 1, 2, and 3** from *Effective Modern C++*, giving you the lowdown on type deduction. Think of it as a quick cheat-sheet to help you grasp the key ideas.
 But hey, while this is a handy summary, nothing beats diving into the book itself for the full scoop straight from the legend, Scott Meyers. It’s worth it!
@@ -119,7 +118,9 @@ In C++, there are three kinds of type deductions:
    auto&& uref3 = 27;   // 27 is an r-value -> T is int&&
    ```
 
--  Consider the below example:
+-  **Brace initialization is not supported in `template` type deduction**
+   
+   Consider the below example:
    ```cpp
    template <typename T>
    void func(T param);
@@ -205,7 +206,7 @@ Here are the key takeaways for `auto` type deduction:
       -  `auto` says the type needs to be deduced.
       -  `decltype` says `decltype` rule needs to be applied.
 
--  Final C++14 Universal reference solution:
+-  **Final C++14 Universal reference solution:**
 
 ```cpp
 template <typename Container, typename Index>
@@ -215,7 +216,7 @@ decltype(auto) authAndAccess(Container&& c, Index i) { // Item 24
 }
 ```
 
--  Final C++11 Universal reference solution:
+-  **Final C++11 Universal reference solution:**
 
 ```cpp
 template <typename Container, typename Index>
@@ -225,7 +226,7 @@ auto authAndAccess(Container&& c, Index i) -> decltype(std::forward<Container>(c
 }
 ```
 
-### Pay attention
+### Pay attention!
 
 ```cpp
 int x = 19;
