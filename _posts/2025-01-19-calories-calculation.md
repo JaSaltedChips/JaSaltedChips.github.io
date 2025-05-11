@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building Better Habits"
+title: "Calories Calculation"
 category: personal-growth
 ---
 Small changes lead to big results. Here’s how I’m working on personal growth...
